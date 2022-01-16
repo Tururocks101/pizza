@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- bootsrap cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap-grid.min.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><img src="images/logo.png" alt="logo"></div>
+        <ul>
+            <li><a href="html/menu.html">MENU</a></li>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="main col-md-5 offset-7">
+                <div class="one">
+                    <h2>Enjoy pizza with family and friends.</h2>
+                    <input type="button" value="ORDER ONLINE" class="button" id="order-online">
+                </div>
+    
+                <div class="two">
+                    <form id="form1" class="form" name="form1" action="">
+                        <legend>Place your order here:
+                        </legend>
+    
+                        <label for="pizza">Select type of pizza</label>
+                        <select id="pizza" name="pizza" required>
+                            <option disabled selected>Pizza type</option>
+                            <option value="veggie">VEGETARIAN</option>
+                            <option value="pepperoni">PEPPERONI</option>
+                            <option value="meat">MEAT</option>
+                            <option value="hawaiian">HAWAIIAN</option>
+                            <option value="steak">BBQ STEAK</option>
+                            <option value="cheese">CHEESE</option>
+                        </select>
+    
+                        <label for="size">Select the size</label>
+                        <select id="size" name="size">
+                            <option disabled selected>Pizza size</option>
+                            <option value="large">LARGE --- Ksh.1,500</option>
+                            <option value="medium">MEDIUM --- Ksh.900</option>
+                            <option value="small">SMALL --- Ksh.750</option>
+                        </select>
+    
+                        <label for="crust">Select type of crust</label>
+                        <select id="crust" name="crust">
+                            <option disabled selected>Pizza crust</option>
+                            <option value="cracker">CRACKER --- Ksh. 150</option>
+                            <option value="cheese">CHEESE --- Ksh.250</option>
+                            <option value="thin">THIN --- Ksh.350</option>
+                        </select>
+    
+                        <label for="toppings">Select your extra toppings</label><br>
+                        <p>Small = ksh.50, Medium = ksh.100 & Large = ksh.150</p>
+                        <div class="checkbox">
+                            <input type="checkbox" value="bacon" name="toppings" id="bacon">
+                            <label for="bacon">BACON</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="onions" name="toppings" id="onions">
+                            <label for="onions">ONIONS</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="mushroom" name="toppings" id="mushroom">
+                            <label for="mushroom">MUSHROOM</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="olives" name="toppings" id="olives">
+                            <label for="olives">BLACK OLIVES</label>
+                        </div><br>
+    
+                        <!-- <span class="button" id="add-pizza">Another pizza</span> -->
+                        <input type="submit" value="CONTINUE" class="button" id="continue">
+                        <div class="output"></div>
+                    </form>
+                </div>
+    
+                <div class="three">
+                    <h2>Confirm your order:</h2>
+                    <table class="confirm-order">
+                        <thead>
+                            <tr>
+                                <th><strong>NAME</strong></th>
+                                <th><strong>SIZE</strong></th>
+                                <th><strong>CRUST</strong></th>
+                                <th><strong>TOPPINGS</strong></th>
+                                <th><strong>TOTAL</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody class="current-order">
+                            <tr>
+                                <td id="name"></td>
+                                <td id="size"></td>
+                                <td id="crust"></td>
+                                <td id="toppings"></td>
+                                <td id="total"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-buttons">
+                        <input type="button" value="DELIVERY?" class="button" id="delivery">
+                        <span class="button" id="pick-up">PICK UP</span>
+                        <br>
+                        <input type="submit" value="ADD PIZZA" class="button" id="add">
+                    </div>
+                </div>
+    
+                <div class="four">
+                    <form id="form2" class="form" name="form2">
+                        <legend>Have your order delivered at Ksh. 150
+                        </legend>
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" placeholder="Full name here">
+                        <div class="dad">
+                            <label for="telephone">Phone Number</label>
+                            <input type="tel" id="phone-number" placeholder="07** *** ***">
+                        </div>
+                        <div class="dad">
+                            <label for="address">Location</label>
+                            <input type="text" id="location" placeholder="Buruburu">
+                        </div>
+                        <p>Or call us on: 0710000000</p>
+    
+                        <input type="submit" value="CHECKOUT" class="button" id="checkout">
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- jquery cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    
+    <!-- custom js link-->
+    <script src="js/main.js"></script>
+</body>
+</html>
